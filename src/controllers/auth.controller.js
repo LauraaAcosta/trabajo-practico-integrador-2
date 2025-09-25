@@ -1,7 +1,7 @@
 import UserModel from "../models/user.model.js";
 
 export const register = async (req, res) => {
-  try {
+    try {
     const data = req.body;
 
     await UserModel.create(data);
@@ -10,9 +10,10 @@ export const register = async (req, res) => {
         ok: true,
         message: "Usuario creado",
     });
-  } catch (error) {
+    } catch (error) {
     res.status(500).json({
-      ok: false,
-      msg: "Ocurrió un error de manera interna",
+        ok: false,
+        msg: "Ocurrió un error de manera interna",
     });
-  }
+    }
+};
