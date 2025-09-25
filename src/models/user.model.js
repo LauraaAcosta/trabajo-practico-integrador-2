@@ -1,19 +1,16 @@
 import { model, Schema } from "mongoose";
 
-const UserSchema = new mongoose.Schema(
+const UserSchema = new Schema(
     {
         username: {
             type: String, 
             unique: true, 
             required: true,
-/*             minlength: 3,
-            maxlength: 20 */
         },
         email: {
             type: String,
             unique: true,
             required: true, 
-/*             match: [/^\S@\S+\.\S+$/, "El email no es válido"] -> puede no ser conveniente, se puede en E-V */
         },
         password: {
             type: String, 
@@ -34,7 +31,11 @@ const UserSchema = new mongoose.Schema(
                 minlength: 2, 
                 maxlength: 50,
             },
-        },]
+        },],
+        deletedAt: {
+            type: Date, 
+            default: null,
+        }
     },
     {
         timestaps: true,

@@ -1,6 +1,6 @@
 import { model, Schema } from "mongoose";
 
-const TagSchema = new mongoose.Schema(
+const TagSchema = new Schema(
     {
         name: {
             type: String, 

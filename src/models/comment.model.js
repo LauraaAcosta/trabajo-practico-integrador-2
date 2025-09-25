@@ -2,7 +2,7 @@ import { model, Schema } from "mongoose";
 
 const ObjectId = Schema.Types.ObjectId;
 
-const TagSchema = new mongoose.Schema(
+const CommentSchema = new Schema(
     {
         content: {
             type: String, 
@@ -21,10 +21,10 @@ const TagSchema = new mongoose.Schema(
         },
     },
     {
-        timestaps: true,
+        timestamps: true,
     },
 );
 
-const TagModel = model ("Tag", TagSchema);
+const CommentModel = model ("Comment", CommentSchema);
 
-export default TagModel;
+export default CommentModel;

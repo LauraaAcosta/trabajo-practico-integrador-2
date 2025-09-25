@@ -2,7 +2,7 @@ import {model, Schema} from "mongoose";
 
 const ObjectId = Schema.Types.ObjectId; 
 
-const ArticleSchema = new mongoose.Schema(
+const ArticleSchema = new Schema(
     {
         title: {
             type: String, 
